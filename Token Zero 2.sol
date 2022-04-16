@@ -24,7 +24,7 @@ contract ERC20 {
      _name = "TokenName";
      _symbol = "TKN";
      _decimals = 18;
-     _totalSupply = 36000000000000000000000000000000;//36 Trilhões 32 Digitos.
+     _totalSupply = 36000000000000000;//36 Trilhões 17 Digitos.
      _balances[msg.sender] = _totalSupply;
      }
 
@@ -43,6 +43,14 @@ contract ERC20 {
      */
      function symbol() public view returns (string memory) {
        return _symbol;
+     }
+
+
+     /**
+     * @return the number of decimals of the token.
+     */
+     function decimals() public view returns(uint8){
+       return _decimals;
      }
 
 
