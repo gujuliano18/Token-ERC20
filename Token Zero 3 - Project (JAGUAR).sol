@@ -203,6 +203,7 @@ contract ERC20 {
        return true;
      }
 
+
      /**
      * @dev Atomically decreases the allowance granted to `spender` by the caller.
      *
@@ -241,6 +242,8 @@ contract ERC20 {
        _balances[account] += amount;
        emit Transfer(address(0), account, amount);
      }
+     
+     
 }//FECHA CONTRATO
 //Token padrão, simples com todas as funções básicas e obrigatórias com algumas opcionais.
 //com mint, sem burn.
