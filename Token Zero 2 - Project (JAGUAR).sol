@@ -32,7 +32,7 @@ contract ERC20 {
      /**
      * @dev Returns the name of the token.
      */
-     function name() public view returns (string memory) {
+     function name() public view returns (string memory){
        return _name;
      }
 
@@ -40,7 +40,7 @@ contract ERC20 {
      /**
      * @return the symbol of the token.
      */
-     function symbol() public view returns (string memory) {
+     function symbol() public view returns (string memory){
        return _symbol;
      }
 
@@ -56,7 +56,7 @@ contract ERC20 {
      /**
      * @dev Returns the amount of tokens in existence.
      */
-     function totalSupply() public view returns (uint256) {
+     function totalSupply() public view returns (uint256){
        return _totalSupply;
      }
 
@@ -64,7 +64,7 @@ contract ERC20 {
      /**
      * @dev Returns the amount of tokens owned by `account`.
      */
-     function balanceOf(address _owner) public view returns (uint256) {
+     function balanceOf(address _owner) public view returns (uint256){
        return _balances[_owner];
      }
 
@@ -180,7 +180,7 @@ contract ERC20 {
      *
      * This value changes when {approve} or {transferFrom} are called.
      */
-     function allowance(address owner, address spender) public view returns (uint256) {
+     function allowance(address owner, address spender) public view returns (uint256){
        return _allowances[owner][spender];
      }
 
@@ -236,11 +236,11 @@ contract ERC20 {
      *
      * This contract is only required for intermediate, library-like contracts.
      */
-     function _msgSender() internal view virtual returns (address) {
+     function _msgSender() internal view virtual returns (address){
        return msg.sender;
      }
 
-     function _msgData() internal view virtual returns (bytes calldata) {
+     function _msgData() internal view virtual returns (bytes calldata){
        return msg.data;
      }
 
@@ -282,7 +282,7 @@ contract ERC20 {
      */
      function _spendAllowance(address owner, address spender, uint256 amount) internal virtual {
         uint256 currentAllowance = allowance(owner, spender);
-        if (currentAllowance != type(uint256).max) {
+        if (currentAllowance != type(uint256).max){
             require(currentAllowance >= amount, "ERC20: insufficient allowance");
             unchecked {
                 _approve(owner, spender, currentAllowance - amount);
@@ -338,6 +338,7 @@ contract ERC20 {
 
      }
 
+
      /**
      * @dev Hook that is called after any transfer of tokens. This includes
      * minting and burning.
@@ -355,6 +356,8 @@ contract ERC20 {
      function _afterTokenTransfer(address from, address to, uint256 amount) internal virtual {
 
      }
+     
+     
 }//FECHA CONTRATO
 //Token padrão, simples com todas as funções básicas e obrigatórias com algumas opcionais.
 //sem mint, com burn.
