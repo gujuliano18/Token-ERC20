@@ -220,7 +220,7 @@ contract ERC20 {
      */
      function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool){
        uint256 currentAllowance = _allowances[msg.sender][spender];
-       require(currentAllowance >= subtractedValue, "ERC20: decreased allowance belo zero");
+       require(currentAllowance >= subtractedValue, "ERC20: decreased allowance below zero");
 
        unchecked{_approve(msg.sender, spender, currentAllowance - subtractedValue);}
        return true;
