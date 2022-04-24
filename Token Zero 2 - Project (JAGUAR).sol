@@ -21,10 +21,10 @@ contract ERC20 {
       event Approval(address indexed owner, address indexed spender, uint256 value);
 
    constructor (){
-     _name = "NAME_TOKEN";//Name of token
-     _symbol = "SSS";//Symbol of token
-     _decimals = 18;//Decimals default
-     _totalSupply = 36000000000000000000000000000000;//Supply 36 trillions tokens 32 digits
+     _name = "NAME_TOKEN";//Token name
+     _symbol = "SSS";//Token symbol
+     _decimals = 18;//Default decimals
+     _totalSupply = 3600000000000000 * 10 ** 18;//Supply 36 trillions tokens 32 digits
      _balances[msg.sender] = _totalSupply;
      }
 
@@ -38,8 +38,7 @@ contract ERC20 {
 
 
      /**
-     * @dev Returns the symbol of the token, usually a shorter version of the
-     * name.
+     * @return the symbol of the token.
      */
      function symbol() public view returns (string memory) {
        return _symbol;
