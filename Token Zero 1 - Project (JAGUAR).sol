@@ -194,6 +194,7 @@ contract ERC20 {
        return true;
      }
 
+
      /**
      * @dev Atomically decreases the allowance granted to `spender` by the caller.
      *
@@ -215,6 +216,8 @@ contract ERC20 {
        unchecked{_approve(msg.sender, spender, currentAllowance - subtractedValue);}
        return true;
      }
+     
+     
 }//FECHA CONTRATO
 //Token padrão, simples com todas as funções básicas e obrigatórias com algumas opcionais.
 //sem mint, sem burn.
