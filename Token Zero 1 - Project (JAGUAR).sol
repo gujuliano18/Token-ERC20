@@ -32,7 +32,7 @@ contract ERC20 {
      /**
      * @dev Returns the name of the token.
      */
-     function name() public view returns (string memory) {
+     function name() public view returns (string memory){
        return _name;
      }
 
@@ -40,7 +40,7 @@ contract ERC20 {
      /**
      * @return the symbol of the token.
      */
-     function symbol() public view returns (string memory) {
+     function symbol() public view returns (string memory){
        return _symbol;
      }
 
@@ -56,7 +56,7 @@ contract ERC20 {
      /**
      * @dev Returns the amount of tokens in existence.
      */
-     function totalSupply() public view returns (uint256) {
+     function totalSupply() public view returns (uint256){
        return _totalSupply;
      }
 
@@ -64,7 +64,7 @@ contract ERC20 {
      /**
      * @dev Returns the amount of tokens owned by `account`.
      */
-     function balanceOf(address _owner) public view returns (uint256) {
+     function balanceOf(address _owner) public view returns (uint256){
        return _balances[_owner];
      }
 
@@ -172,7 +172,7 @@ contract ERC20 {
      *
      * This value changes when {approve} or {transferFrom} are called.
      */
-     function allowance(address owner, address spender) public view returns (uint256) {
+     function allowance(address owner, address spender) public view returns (uint256){
        return _allowances[owner][spender];
      }
 
